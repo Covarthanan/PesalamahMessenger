@@ -1,0 +1,47 @@
+<div class="box">
+<h1>{{title}}</h1><br>
+<div>
+  <a class = "alreadyAccount" *ngIf = "alreadyAccount"  (click) = "checkExistingUsername()" >Click here if already you have an Account?</a>
+</div>
+<div class="container username" *ngIf= "hideUsername">
+        <input type="text" placeholder="Enter the Your Good Name" name="username" [(ngModel)] = "username" autocomplete="off">
+        <i class="fas fa-paper-plane" (click) = "getUsername()"></i>
+</div>
+
+<div class="container usermail" *ngIf= "hidemailInput">
+  <input type="text" placeholder="Enter the Your Vaild Gmail" name="usermail" [(ngModel)] = "usermail" autocomplete="off">
+  <i class="fas fa-paper-plane" (click) = "getGmail()"></i>
+</div>
+
+<div *ngIf= "hideOTP">
+ <h6 class = "alreadyAccount">Verification Code Send to Your Gmail : {{usermail}}</h6>
+</div>
+
+<div class="container OTP" *ngIf= "hideOTP">
+  <input type="text" placeholder="Enter the OTP Sent to Your Gmail" name="OTP" [(ngModel)] = "OTP" autocomplete="off">
+  <i class="fas fa-paper-plane" (click) = "verifyOTP()"></i>
+</div>
+
+<div class="container existingUsername" *ngIf= "hideExistingUsername">
+  <input type="text" placeholder="Enter the existing username" name="existingUsername" [(ngModel)] = "existingUsername" autocomplete="off">
+  <i class="fas fa-paper-plane" (click) = "getExistingUsername()"></i>
+</div>
+
+<div class="container existingUsermail" *ngIf= "hideExistingMailInput">
+  <input type="text" placeholder="Enter the Your Signed-up Gmail" name="existingUsermail" [(ngModel)] = "existingUsermail" autocomplete="off">
+  <i class="fas fa-paper-plane" (click) = "VerifyExistingUser()"></i>
+</div>
+
+<svg width="50px" height="50px" viewBox="0 0 16 16" class="bi bi-volume-up-fill" fill="#283618" xmlns="http://www.w3.org/2000/svg" (click) = "accept()" >
+    <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+    <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+    <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
+    <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z"/>
+  </svg>
+  <svg width="50px" height="50px" viewBox="0 0 16 16" class="bi bi-volume-mute-fill" fill="#283618" xmlns="http://www.w3.org/2000/svg" (click) = "reject()" >
+    <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zm7.137 2.096a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708l4-4a.5.5 0 0 1 .708 0z"/>
+    <path fill-rule="evenodd" d="M9.146 5.646a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0z"/>
+  </svg>
+  
+</div>
+

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Pesalamah"
+    }
+  },
+  "defaultProject": "Pesalamah",
+  "cli": {
+    "analytics": "3d28cb73-f95d-494b-be6d-2e6022a6d91d"
+  }
 }
